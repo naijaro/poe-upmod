@@ -1,0 +1,7 @@
+E:\PoE - UPMod\UPMod\UPMod\bin\Debug\UPMod.pw.dll
+E:\PoE - UPMod\UPMod\UPMod\bin\Debug\UPMod.pw.pdb
+E:\PoE - UPMod\UPMod\UPMod\bin\Debug\Assembly-CSharp.dll
+E:\PoE - UPMod\UPMod\UPMod\bin\Debug\Patchwork.Attributes.dll
+E:\PoE - UPMod\UPMod\UPMod\bin\Debug\UnityEngine.dll
+E:\PoE - UPMod\UPMod\UPMod\obj\Debug\UPMod.pw.dll
+E:\PoE - UPMod\UPMod\UPMod\obj\Debug\UPMod.pw.pdb

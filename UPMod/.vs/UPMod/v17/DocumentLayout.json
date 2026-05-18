@@ -1,0 +1,85 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "G:\\modding\\Pillars of Eternity\\upmod\\upmod-v3.9.3\\UPMod\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CA9334F5-F0BE-4CCD-BBE4-F1EFDF92A044}|UPMod\\UPMod.csproj|g:\\modding\\pillars of eternity\\upmod\\upmod-v3.9.3\\upmod\\upmod\\mod_gamestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA9334F5-F0BE-4CCD-BBE4-F1EFDF92A044}|UPMod\\UPMod.csproj|solutionrelative:upmod\\mod_gamestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA9334F5-F0BE-4CCD-BBE4-F1EFDF92A044}|UPMod\\UPMod.csproj|G:\\modding\\Pillars of Eternity\\upmod\\upmod-v3.9.3\\UPMod\\upmod\\mod_health.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA9334F5-F0BE-4CCD-BBE4-F1EFDF92A044}|UPMod\\UPMod.csproj|solutionrelative:upmod\\mod_health.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA9334F5-F0BE-4CCD-BBE4-F1EFDF92A044}|UPMod\\UPMod.csproj|G:\\modding\\Pillars of Eternity\\upmod\\upmod-v3.9.3\\UPMod\\upmod\\mod_consumepotion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA9334F5-F0BE-4CCD-BBE4-F1EFDF92A044}|UPMod\\UPMod.csproj|solutionrelative:upmod\\mod_consumepotion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA9334F5-F0BE-4CCD-BBE4-F1EFDF92A044}|UPMod\\UPMod.csproj|G:\\modding\\Pillars of Eternity\\upmod\\upmod-v3.9.3\\UPMod\\upmod\\properties\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA9334F5-F0BE-4CCD-BBE4-F1EFDF92A044}|UPMod\\UPMod.csproj|solutionrelative:upmod\\properties\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "mod_Health.cs",
+              "DocumentMoniker": "G:\\modding\\Pillars of Eternity\\upmod\\upmod-v3.9.3\\UPMod\\UPMod\\mod_Health.cs",
+              "RelativeDocumentMoniker": "UPMod\\mod_Health.cs",
+              "ToolTip": "G:\\modding\\Pillars of Eternity\\upmod\\upmod-v3.9.3\\UPMod\\UPMod\\mod_Health.cs",
+              "RelativeToolTip": "UPMod\\mod_Health.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-17T17:43:29.268Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "mod_GameState.cs",
+              "DocumentMoniker": "G:\\modding\\Pillars of Eternity\\upmod\\upmod-v3.9.3\\UPMod\\UPMod\\mod_GameState.cs",
+              "RelativeDocumentMoniker": "UPMod\\mod_GameState.cs",
+              "ToolTip": "G:\\modding\\Pillars of Eternity\\upmod\\upmod-v3.9.3\\UPMod\\UPMod\\mod_GameState.cs",
+              "RelativeToolTip": "UPMod\\mod_GameState.cs",
+              "ViewState": "AQIAAEMAAAAAAAAAAAAgwAkAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-16T11:49:10.328Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AssemblyInfo.cs",
+              "DocumentMoniker": "G:\\modding\\Pillars of Eternity\\upmod\\upmod-v3.9.3\\UPMod\\UPMod\\Properties\\AssemblyInfo.cs",
+              "RelativeDocumentMoniker": "UPMod\\Properties\\AssemblyInfo.cs",
+              "ToolTip": "G:\\modding\\Pillars of Eternity\\upmod\\upmod-v3.9.3\\UPMod\\UPMod\\Properties\\AssemblyInfo.cs",
+              "RelativeToolTip": "UPMod\\Properties\\AssemblyInfo.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-16T11:48:16.033Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "mod_ConsumePotion.cs",
+              "DocumentMoniker": "G:\\modding\\Pillars of Eternity\\upmod\\upmod-v3.9.3\\UPMod\\UPMod\\mod_ConsumePotion.cs",
+              "RelativeDocumentMoniker": "UPMod\\mod_ConsumePotion.cs",
+              "ToolTip": "G:\\modding\\Pillars of Eternity\\upmod\\upmod-v3.9.3\\UPMod\\UPMod\\mod_ConsumePotion.cs",
+              "RelativeToolTip": "UPMod\\mod_ConsumePotion.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-20T15:54:40.284Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
