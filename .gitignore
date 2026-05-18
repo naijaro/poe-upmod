@@ -1,0 +1,6 @@
+# Git-ignoring Assembly-CSharp.dll, since it is proprietary code that belongs to Obsidian
+# if you want to generate UPMod.pw.dll yourself, copy Assembly-CSharp.dll from
+# G:\platforms\Steam\steamapps\common\Pillars of Eternity\PillarsOfEternity_Data\Managed
+# to repo's root
+
+Assembly-CSharp*.dll
