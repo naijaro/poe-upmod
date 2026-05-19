@@ -1,7 +1,11 @@
-E:\PoE - UPMod\UPMod\UPMod\bin\Debug\UPMod.pw.dll
-E:\PoE - UPMod\UPMod\UPMod\bin\Debug\UPMod.pw.pdb
-E:\PoE - UPMod\UPMod\UPMod\bin\Debug\Assembly-CSharp.dll
-E:\PoE - UPMod\UPMod\UPMod\bin\Debug\Patchwork.Attributes.dll
-E:\PoE - UPMod\UPMod\UPMod\bin\Debug\UnityEngine.dll
-E:\PoE - UPMod\UPMod\UPMod\obj\Debug\UPMod.pw.dll
-E:\PoE - UPMod\UPMod\UPMod\obj\Debug\UPMod.pw.pdb
+D:\projects-hobby\poe-upmod\UPMod\UPMod\bin\Debug\UPMod.pw.dll
+D:\projects-hobby\poe-upmod\UPMod\UPMod\bin\Debug\UPMod.pw.pdb
+D:\projects-hobby\poe-upmod\UPMod\UPMod\bin\Debug\Assembly-CSharp.dll
+D:\projects-hobby\poe-upmod\UPMod\UPMod\bin\Debug\Patchwork.Attributes.dll
+D:\projects-hobby\poe-upmod\UPMod\UPMod\bin\Debug\UnityEngine.CoreModule.dll
+D:\projects-hobby\poe-upmod\UPMod\UPMod\bin\Debug\UnityEngine.dll
+D:\projects-hobby\poe-upmod\UPMod\UPMod\obj\Debug\UPMod.csproj.AssemblyReference.cache
+D:\projects-hobby\poe-upmod\UPMod\UPMod\obj\Debug\UPMod.csproj.CoreCompileInputs.cache
+D:\projects-hobby\poe-upmod\UPMod\UPMod\obj\Debug\UPMod.csproj.Up2Date
+D:\projects-hobby\poe-upmod\UPMod\UPMod\obj\Debug\UPMod.pw.dll
+D:\projects-hobby\poe-upmod\UPMod\UPMod\obj\Debug\UPMod.pw.pdb

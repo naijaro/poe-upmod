@@ -11,7 +11,7 @@ namespace UPMod
         {
             get
             {
-                return "1.0.0-beta";
+                return "1.1.0";
             }
         }
 
