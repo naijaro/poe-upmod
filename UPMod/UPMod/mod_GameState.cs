@@ -48,7 +48,9 @@ namespace UPMod
             {
                 GameState.s_combatPauseTimer -= Time.deltaTime;
             }
-            if (GameState.s_isInCombat)
+
+            // UPDATED: tactical mode check added by game update
+            if (GameState.s_isInCombat && !TacticalModeManager.IsTacticalModeEnabled)
             {
                 GameState.s_inCombatTimer += Time.deltaTime;
             }
@@ -63,7 +65,8 @@ namespace UPMod
             {
                 return;
             }
-            AIController activeCombatant = GameState.GetActiveCombatant(false);
+            // UPDATED: game now calls GetActiveCombatant(true)
+            AIController activeCombatant = GameState.GetActiveCombatant(true);
             if (activeCombatant)
             {
                 target = activeCombatant.CurrentTarget;
@@ -80,20 +83,26 @@ namespace UPMod
 
                 CharacterStats playerStats = s_playerCharacter.gameObject.GetComponent<CharacterStats>();
                 AIController aIController = GameUtilities.FindActiveAIController(s_playerCharacter.gameObject);
-                bool prolongCombat = false;             
+                bool prolongCombat = false;
 
-                if (aIController && playerStats && playerStats.IsInvisible)
+                if (aIController && playerStats && playerStats.IsInvisible && !TacticalModeManager.IsTacticalModeEnabled)
                 {
                     float range = Math.Max(aIController.PerceptionDistance, 12);
                     List<GameObject> enemies = new List<GameObject>();
-                    GameUtilities.GetEnemiesInRange(s_playerCharacter.gameObject, aIController, range, enemies, false);
-                    prolongCombat = enemies.Count > 0;                    
+                    GameUtilities.GetEnemiesInRange(
+                        s_playerCharacter.gameObject,
+                        aIController,
+                        range,
+                        enemies,
+                        false);
+
+                    prolongCombat = enemies.Count > 0;
                 }
 
                 if (prolongCombat)
                 {
                     flag2 = true;
-                    GameState.s_isInCombat = true;                    
+                    GameState.s_isInCombat = true;
                     GameState.s_outOfCombatTimer = CharacterStats.StaminaRechargeDelay;
                 }
             }
@@ -101,12 +110,40 @@ namespace UPMod
 
             GameState.s_isInCombat = (GameState.s_outOfCombatTimer > 0f);
 
-            if (GameState.s_isInCombat && GameState.s_combatPauseTimer <= 0f)
+            // UPDATED: tactical mode check added by game update
+            if (GameState.s_isInCombat &&
+                GameState.s_combatPauseTimer <= 0f &&
+                !TacticalModeManager.IsTacticalModeEnabled)
             {
-                GameState.AutoPause(AutoPauseOptions.PauseEvent.CombatTimer, null, null, null);
-                GameState.s_combatPauseTimer = GameState.Option.AutoPause.CombatRoundTime;
+                GameState.AutoPause(
+                    AutoPauseOptions.PauseEvent.CombatTimer,
+                    null,
+                    null,
+                    null);
+
+                GameState.s_combatPauseTimer =
+                    GameState.Option.AutoPause.CombatRoundTime;
             }
-            if (GameState.s_isInCombat != flag || (flag2 && GameState.s_isInTrapTriggeredCombat))
+            // UPDATED: smart camera combat tracking added by game update
+            if (GameState.InCombat && SmartCamera.Instance)
+            {
+                GameState.GetAllActiveCombatants(GameState.s_activeEnemyList);
+
+                SmartCamera.Instance.RemoveGameObjectTypesToFollow(
+                    SmartCamera.TrackingTargetType.Enemy,
+                    1.5f);
+
+                for (int i = 0; i < GameState.s_activeEnemyList.Count; i++)
+                {
+                    SmartCamera.Instance.AddAdditionalGameObjectToFollow(
+                        SmartCamera.TrackingTargetType.Enemy,
+                        GameState.s_activeEnemyList[i].gameObject);
+                }
+
+                GameState.s_activeEnemyList.Clear();
+            }
+            if (GameState.s_isInCombat != flag ||
+                (flag2 && GameState.s_isInTrapTriggeredCombat))
             {
                 GameState.s_inCombatTimer = 0f;
                 if (GameState.s_isInCombat)
@@ -114,15 +151,22 @@ namespace UPMod
                     GameState.s_isInTrapTriggeredCombat = false;
                     if (!GameState.s_isInTrapTriggeredCombat)
                     {
-                        TutorialManager.STriggerTutorialsOfTypeFast(TutorialManager.ExclusiveTriggerType.COMBAT_START);
+                        TutorialManager.STriggerTutorialsOfTypeFast(
+                            TutorialManager.ExclusiveTriggerType.COMBAT_START);
                     }
                     if (GameState.OnCombatStart != null)
                     {
                         GameState.OnCombatStart(null, EventArgs.Empty);
                     }
-                    if (!GameState.s_isInTrapTriggeredCombat)
+                    // UPDATED: tactical mode check added by game update
+                    if (!GameState.s_isInTrapTriggeredCombat &&
+                        !TacticalModeManager.IsTacticalModeEnabled)
                     {
-                        GameState.AutoPause(AutoPauseOptions.PauseEvent.CombatStart, target, null, null);
+                        GameState.AutoPause(
+                            AutoPauseOptions.PauseEvent.CombatStart,
+                            target,
+                            null,
+                            null);
                     }
                 }
                 else
@@ -151,6 +195,5 @@ namespace UPMod
                 }
             }
         }
-
     }
 }

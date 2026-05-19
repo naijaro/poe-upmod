@@ -11,45 +11,32 @@ namespace UPMod
     [ModifiesType]
     public class mod_UIVersionNumber : UIVersionNumber
     {
-
-        [MemberAlias(".ctor", typeof(MonoBehaviour))]
-        public void alias_MonoBehavior_ctor()
+        [ModifiesMember("UpdateText")]
+        private void mod_UpdateText()
         {
+            if (this.m_Label)
+            {
+                // ORIGINAL (2026):
+                // this.m_Label.text = ProductConfiguration.GetVersion();
 
+                // PATCH:
+                // append UPMod version while preserving game's full version format
+                // example:
+                // 3.9.3.12345 - UPMod 1.01.393
+                // - where 1.01 is mod version
+                // - and .393 is the version of the game it is compatible with
+
+                string gameVersion = ProductConfiguration.GetVersion();
+
+                // UPMod version should track latest supported game major/minor/patch
+                string upmodVersion = "1.01.393";
+
+                this.m_Label.text =
+                    string.Format(
+                        "{0} - UPMod {1}",
+                        gameVersion,
+                        upmodVersion);
+            }
         }
-
-        [ModifiesMember(".ctor")]
-        public void mod_ctor()
-        {
-            alias_MonoBehavior_ctor();
-            var ieModVersion = "1.01.306";
-            this.FormatString = $"v{{0}}.{{1}}.{{2}} {{3}} - UPMod {ieModVersion}";
-            this.m_stringBuilder = new StringBuilder();
-        }
-    
-    //[NewMember(null)]
-    //public String GetIEModVersion()
-    //{
-    //    Type IEModType = System.Reflection.Assembly.GetExecutingAssembly().GetType("IEMod.IEModVersion", false);
-    //    String version = typeof(UIVersionNumber).GetField("Version").GetValue(null).Dump();
-
-    //    if (IEModType != null)
-    //    {
-    //        FieldInfo[] fields = IEModType.GetFields();
-
-    //        for (int i = 0; i < fields.Length; i++)
-    //        {
-    //            bool isVersion = "Version".Equals(fields[i].Name.ToString(), System.StringComparison.OrdinalIgnoreCase);
-
-    //            if (isVersion)
-    //            {
-    //                object vObj = (String)fields[i].GetValue();
-    //                return fields[i].GetValue.ToString();
-    //            }
-    //        }
-    //    }
-
-    //    return null;
-    //}
     }
 }
