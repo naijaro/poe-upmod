@@ -35,7 +35,7 @@ namespace UPMod
                     // PATCH START:
                     // RELATED BUGS: #2, #3
                     float dmgCoef = component.StatDamageHealMultiplier;
-                    
+
                     if (sourceEffect != null && sourceEffect.IsDOT)
                     {
                         CharacterStats attackersStats = source.GetComponent<CharacterStats>();
@@ -45,7 +45,7 @@ namespace UPMod
                         float raceSlayerDamageCoef = System.Math.Max(1, attackersStats.GetBonusDamagePerRaceMultiplier(attackedCharacterStats.CharacterRace));
 
                         float spiritSlayerDamageCoef = System.Math.Max(1, attackersStats.GetBonusDamagePerRaceMultiplier(CharacterStats.Race.Spirit));
-                        float vesselSlayerDamageCoef = System.Math.Max(1, attackersStats.GetBonusDamagePerRaceMultiplier(CharacterStats.Race.Vessel));                        
+                        float vesselSlayerDamageCoef = System.Math.Max(1, attackersStats.GetBonusDamagePerRaceMultiplier(CharacterStats.Race.Vessel));
 
                         // non raw dots should be affected by elemental talents
                         if (damageType != DamagePacket.DamageType.Raw)
@@ -54,9 +54,17 @@ namespace UPMod
                         }
 
                         // non fixed dots should be affected by racial slayer talents
-                        bool isWounding = "WeaponOrShield".Equals(sourceEffect.AbilityType.ToString(), System.StringComparison.OrdinalIgnoreCase);
-                        bool isWoundingShot = sourceEffect.Origin != null ? sourceEffect.Origin.name.ToLower().IndexOf("woundingshot") >= 0 : false;
-                        bool isEnduringFlames = sourceEffect.Origin != null ? sourceEffect.Origin.name.ToLower().IndexOf("flamesofdevotion") >= 0 : false;
+                        string originName = sourceEffect.Origin?.name ?? string.Empty;
+                        bool isWounding =
+                            sourceEffect.AbilityType.ToString().Equals("WeaponOrShield", System.StringComparison.OrdinalIgnoreCase);
+                        bool isWoundingShot =
+                            originName.IndexOf("woundingshot", System.StringComparison.OrdinalIgnoreCase) >= 0 ||
+                            originName.IndexOf("wounding_shot", System.StringComparison.OrdinalIgnoreCase) >= 0;
+                        bool isEnduringFlames =
+                            originName.IndexOf("flamesofdevotion", System.StringComparison.OrdinalIgnoreCase) >= 0;
+                        bool isRecallAgony =
+                            originName.IndexOf("recallagony", System.StringComparison.OrdinalIgnoreCase) >= 0 ||
+                            originName.IndexOf("recall_agony", System.StringComparison.OrdinalIgnoreCase) >= 0; ;
                         bool isFixedDoT = isWounding || isWoundingShot || isEnduringFlames;
 
                         // there are several 'fixed' dots whose damage is a percentage of weapon damage, and thus should not be affected (because these talents have already increased hit damage):
@@ -64,7 +72,7 @@ namespace UPMod
                         // wounding shot - is of [Ability] type
                         // enduring flames - is of [Talent] type
 
-                        if (!isFixedDoT)
+                        if (!isFixedDoT && !isRecallAgony)
                         {
                             dmgCoef += raceSlayerDamageCoef - 1;
                         }
@@ -174,10 +182,10 @@ namespace UPMod
             if (PartyHelper.IsPartyMember(source))
             {
                 CharacterStats attStats = source.GetComponent<CharacterStats>();
-                PartyMemberAI memberAI = source.GetComponent<PartyMemberAI>();                
+                PartyMemberAI memberAI = source.GetComponent<PartyMemberAI>();
 
                 if (memberAI != null)
-                {                    
+                {
                     DamageInfo dmgInfo = new DamageInfo(base.gameObject, amount, null);
                     dmgInfo.DamageType = damageType;
                     dmgInfo.FinalAdjustedDamage = amount;
