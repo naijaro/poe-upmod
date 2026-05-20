@@ -1,12 +1,50 @@
 # Description
 
-UPMod.pw.dll is a small mod for the [Pillars of Eternity](https://store.steampowered.com/app/291650/Pillars_of_Eternity/) game that fixes several in-game bugs and is intended to be used with [Patchwork Launcher](https://github.com/GregRos/Patchwork).
+`UPMod.pw.dll` is a small mod for [Pillars of Eternity](https://store.steampowered.com/app/291650/Pillars_of_Eternity/) that fixes several in-game bugs. It is intended to be used with [Patchwork Launcher](https://github.com/GregRos/Patchwork) and patches several methods from `Assembly-CSharp.dll`.
 
-It patches several methods from `Assembly-CSharp.dll`.
+## Versioning
 
-- snapshots of patched methods: [basegame-snapshots](https://github.com/naijaro/poe-upmod-basegame-snapshots)
-- UPMod on Nexus Mods: [mod page](https://www.nexusmods.com/pillarsofeternity/mods/308)
-- UPMod on official forums: [forum topic](https://forums.obsidian.net/topic/92999-community-bug-fixes/#comment-1921632)
+- UPMod.1.01.306.pw.dll was generated for v3.06 of the game
+- UPMod.1.01.370.pw.dll was tested with v3.70 of the game
+- UPMod.1.01.393.pw.dll was generated for v3.9.3 of the game
+
+## Patchwork Downloads
+
+Patchwork Launcher can be downloaded from:
+
+- [Nexus Mods (launcher + appinfo.dll)](https://www.nexusmods.com/pillarsofeternity/mods/335)
+- [Nexus Mods (launcher + appinfo.dll + IEMod)](https://www.nexusmods.com/pillarsofeternity/mods/1)
+- [GitHub (launcher only)](https://github.com/GregRos/Patchwork)
+
+## Related Links
+
+- [Base game method snapshots](https://github.com/naijaro/poe-upmod-basegame-snapshots)
+- [UPMod on Nexus Mods](https://www.nexusmods.com/pillarsofeternity/mods/308)
+- [UPMod forum thread](https://forums.obsidian.net/topic/92999-community-bug-fixes/#comment-1921632)
+
+## Building from Source
+
+To build `UPMod.pw.dll` from source:
+
+1. Copy `Assembly-CSharp.dll` from the game directory, for example:
+
+   ```text
+   G:\platforms\Steam\steamapps\common\Pillars of Eternity\PillarsOfEternity_Data\Managed
+   ```
+
+2. Open it using `OpenAssemblyCreator.exe` from Patchwork:
+
+   ```text
+   OpenAssemblyCreator.exe Assembly-CSharp.dll Assembly-CSharp.Open.dll
+   ```
+
+3. Copy `Assembly-CSharp.Open.dll` into the project root and rename it to:
+
+   ```text
+   Assembly-CSharp.dll
+   ```
+
+4. Rebuild the solution in Visual Studio.
 
 # License Note
 
