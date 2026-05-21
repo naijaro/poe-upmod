@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "D:\\projects-hobby\\poe-upmod\\UPMod\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CA9334F5-F0BE-4CCD-BBE4-F1EFDF92A044}|UPMod\\UPMod.csproj|D:\\projects-hobby\\poe-upmod\\UPMod\\upmod\\mod_health.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CA9334F5-F0BE-4CCD-BBE4-F1EFDF92A044}|UPMod\\UPMod.csproj|d:\\projects-hobby\\poe-upmod\\upmod\\upmod\\mod_health.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CA9334F5-F0BE-4CCD-BBE4-F1EFDF92A044}|UPMod\\UPMod.csproj|solutionrelative:upmod\\mod_health.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA9334F5-F0BE-4CCD-BBE4-F1EFDF92A044}|UPMod\\UPMod.csproj|D:\\projects-hobby\\poe-upmod\\UPMod\\upmod\\mod_uiversionnumber.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA9334F5-F0BE-4CCD-BBE4-F1EFDF92A044}|UPMod\\UPMod.csproj|solutionrelative:upmod\\mod_uiversionnumber.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CA9334F5-F0BE-4CCD-BBE4-F1EFDF92A044}|UPMod\\UPMod.csproj|D:\\projects-hobby\\poe-upmod\\UPMod\\upmod\\mod_consumepotion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CA9334F5-F0BE-4CCD-BBE4-F1EFDF92A044}|UPMod\\UPMod.csproj|solutionrelative:upmod\\mod_consumepotion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CA9334F5-F0BE-4CCD-BBE4-F1EFDF92A044}|UPMod\\UPMod.csproj|d:\\projects-hobby\\poe-upmod\\upmod\\upmod\\mod_uiversionnumber.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CA9334F5-F0BE-4CCD-BBE4-F1EFDF92A044}|UPMod\\UPMod.csproj|solutionrelative:upmod\\mod_uiversionnumber.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CA9334F5-F0BE-4CCD-BBE4-F1EFDF92A044}|UPMod\\UPMod.csproj|D:\\projects-hobby\\poe-upmod\\UPMod\\upmod\\properties\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -41,13 +41,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "mod_UIVersionNumber.cs",
               "DocumentMoniker": "D:\\projects-hobby\\poe-upmod\\UPMod\\UPMod\\mod_UIVersionNumber.cs",
               "RelativeDocumentMoniker": "UPMod\\mod_UIVersionNumber.cs",
               "ToolTip": "D:\\projects-hobby\\poe-upmod\\UPMod\\UPMod\\mod_UIVersionNumber.cs",
               "RelativeToolTip": "UPMod\\mod_UIVersionNumber.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAABHAAAA",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAQwBgAAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-19T17:03:09.478Z",
               "EditorCaption": ""
@@ -71,7 +71,7 @@
               "RelativeDocumentMoniker": "UPMod\\mod_Health.cs",
               "ToolTip": "D:\\projects-hobby\\poe-upmod\\UPMod\\UPMod\\mod_Health.cs",
               "RelativeToolTip": "UPMod\\mod_Health.cs",
-              "ViewState": "AQIAACoAAAAAAAAAAIAwwDcAAABVAAAA",
+              "ViewState": "AQIAAJcAAAAAAAAAAIAwwKYAAABTAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-17T17:43:29.268Z",
               "EditorCaption": ""
@@ -102,7 +102,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "mod_ConsumePotion.cs",
               "DocumentMoniker": "D:\\projects-hobby\\poe-upmod\\UPMod\\UPMod\\mod_ConsumePotion.cs",
               "RelativeDocumentMoniker": "UPMod\\mod_ConsumePotion.cs",
@@ -110,8 +110,7 @@
               "RelativeToolTip": "UPMod\\mod_ConsumePotion.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-20T15:54:40.284Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-20T15:54:40.284Z"
             }
           ]
         }
