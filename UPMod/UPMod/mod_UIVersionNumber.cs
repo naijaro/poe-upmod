@@ -22,14 +22,14 @@ namespace UPMod
                 // PATCH:
                 // append UPMod version while preserving game's full version format
                 // example:
-                // 3.9.3.12345 - UPMod 1.01.393
+                // 3.9.4.12345 - UPMod 1.01.394
                 // - where 1.01 is mod version
                 // - and .393 is the version of the game it is compatible with
 
                 string gameVersion = ProductConfiguration.GetVersion();
 
                 // UPMod version should track latest supported game major/minor/patch
-                string upmodVersion = "1.01.393";
+                string upmodVersion = "1.01.394";
 
                 this.m_Label.text =
                     string.Format(

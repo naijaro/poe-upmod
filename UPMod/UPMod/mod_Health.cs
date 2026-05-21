@@ -10,7 +10,7 @@ namespace UPMod
     public class mod_Health : Health
     {
         [ModifiesMember("ApplyDamageDirectly")]
-        public void mod_ApplyDamageDirectly(float amount, DamagePacket.DamageType damageType, GameObject source, StatusEffect sourceEffect)
+        public void mod_ApplyDamageDirectly(float amount, DamagePacket.DamageType damageType, GameObject source, StatusEffect sourceEffect, bool hideDamage = false)
         {
             if (this.Dead || this.Unconscious || !this.CanBeTargeted)
             {
@@ -162,7 +162,10 @@ namespace UPMod
             {
                 health.OnDamageDealt(base.gameObject, gameEventArgs2);
             }
-            UIHealthstringManager.Instance.ShowNumber(amount, base.gameObject);
+            if (!hideDamage)
+            {
+                UIHealthstringManager.Instance.ShowNumber(amount, base.gameObject);
+            }
             if (sourceEffect == null || sourceEffect.Params.IsHostile)
             {
                 ScriptEvent component2 = base.GetComponent<ScriptEvent>();
