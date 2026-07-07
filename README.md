@@ -7,6 +7,8 @@
 - UPMod.1.01.306.pw.dll was generated for v3.06 of the game
 - UPMod.1.01.370.pw.dll was tested with v3.70 of the game
 - UPMod.1.01.393.pw.dll was generated for v3.9.3 of the game
+- UPMod.1.01.394.pw.dll was generated for v3.9.4 of the game
+- UPMod.1.01.395.pw.dll was generated for v3.9.5 of the game
 
 ## Patchwork Downloads
 
